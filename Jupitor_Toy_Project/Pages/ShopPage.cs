@@ -335,7 +335,7 @@ namespace Jupitor_Toy_Project.Pages
         }
 
 
-        //*x*************** Changes Verify that total = sum(sub totals) ********************//
+        //*x***************Verify that total = sum(sub totals) ********************//
         public void VerifySumOfAllProduct()
         {
             //StuffedFrog Total Sun
