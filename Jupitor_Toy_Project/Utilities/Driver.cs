@@ -24,7 +24,7 @@ namespace Jupitor_Toy_Project.Utilities
         [OneTimeSetUp]
         public void Initialize()
         {
-            hTMLReporter = new ExtentHtmlReporter(ConstantHelpers.ReportsPath);
+            //hTMLReporter = new ExtentHtmlReporter(ConstantHelpers.ReportsPath);
             hTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent = new ExtentReports();
             extent.AttachReporter(hTMLReporter);

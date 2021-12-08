@@ -1,4 +1,5 @@
 ﻿using System;
+using AventStack.ExtentReports;
 using Jupitor_Toy_Project.Pages;
 using Jupitor_Toy_Project.Utilities;
 using NUnit.Framework;
@@ -12,10 +13,12 @@ namespace Jupitor_Toy_Project.Test
         [Test]
         public void ContactPageErrorValidationTest()
         {
+            ExtentTest test = null;
             //Home page object
             HomePage homePageObj = new HomePage(driver);
             homePageObj.NavigateToContactPage();
             //Contact Page objects
+            test = extent.CreateTest("ContactPageErrorValidationTest").Info("Test Started");
             ContactPage contactPageObj = new ContactPage(driver);
             contactPageObj.ClickSubmitBtn();
             contactPageObj.ForenameValidation();

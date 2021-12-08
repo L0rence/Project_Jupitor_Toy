@@ -1,4 +1,5 @@
 ﻿using System;
+using AventStack.ExtentReports;
 using Jupitor_Toy_Project.Pages;
 using Jupitor_Toy_Project.Utilities;
 using NUnit.Framework;
@@ -11,18 +12,29 @@ namespace Jupitor_Toy_Project.Test
         [Test]
         public void BuyFunnyCowFluffyBunnyTest()
         {
-            //Home page object
-            HomePage homePageObj = new HomePage(driver);
-            homePageObj.NavigateToShopPage();
+            ExtentTest test = null;
+            try
+            {
+                test = extent.CreateTest("BuyFunnyCowFluffyBunnyTest").Info("Test Started");
+                //Home page object
+                test.Log(Status.Info, "Buy Funny cow and Fluffy Bunny Test");
+                HomePage homePageObj = new HomePage(driver);
+                homePageObj.NavigateToShopPage();
 
-            //Shop Page Objects
-            ShopPage shopPageObj = new ShopPage(driver);
-            //shopPageObj.BuyItems();
+                //Shop Page Objects
+                ShopPage shopPageObj = new ShopPage(driver);
+                //shopPageObj.BuyItems();
+
+                shopPageObj.FunnyCow();
+                shopPageObj.FluffyBunny();
+                shopPageObj.ClickOnCart();
+                shopPageObj.validateCart();
+            }
+            catch (Exception ex)
+            {
+                test.Log(Status.Fail,(ex.ToString()));
+            }
            
-            shopPageObj.FunnyCow();
-            shopPageObj.FluffyBunny();
-            shopPageObj.ClickOnCart();
-            shopPageObj.validateCart();
 
 
         }

@@ -22,10 +22,14 @@ namespace Jupitor_Toy_Project.Utilities
         public void Initialize()
         {
             hTMLReporter = new ExtentHtmlReporter(ConstantHelpers.ReportsPath);
-            //hTMLReporter = new ExtentHtmlReporter(@"/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/index.html");
-            hTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent = new ExtentReports();
+            //var htmlReporter = new ExtentHtmlReporter(@"/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/ProjectReport.html");
             extent.AttachReporter(hTMLReporter);
+
+
+            //hTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            extent = new ExtentReports();
+            //extent.AttachReporter(hTMLReporter);
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             //ExcelLibHelper.PopulateInCollection(ConstantHelpers.DataFilePath, "Credentials");
@@ -54,11 +58,11 @@ namespace Jupitor_Toy_Project.Utilities
             //close driver
             driver.Close();
         }
-        //[OneTimeTearDown]
-        //public void FinalSteps1()
-        //{
-        //    extent.Flush();
-        //    File.Move("/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/index.html", "/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/ExtentReport_" + DateTime.Now.ToString("MMM-dd-yyyy hh-mm-ss") + ".html");
-        //}
+        [OneTimeTearDown]
+        public void ExtentClose()
+        {
+            extent.Flush();
+            //File.Move("/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/index.html", "/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/ExtentReport_" + DateTime.Now.ToString("MMM-dd-yyyy hh-mm-ss") + ".html");
+        }
     }
 }
