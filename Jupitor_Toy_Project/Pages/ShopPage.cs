@@ -16,7 +16,7 @@ namespace Jupitor_Toy_Project.Pages
             this.driver = driver;
         }
 
-        //Page factory design
+        //Page factory design Testing 
         IWebElement FunnuCowBuyBtn => driver.FindElement(By.XPath("//*[@id='product-6']/div/p/a"));
         IWebElement FluffyBunnyBtn => driver.FindElement(By.XPath("//li[@id='product-4']//a[@class='btn btn-success'][normalize-space()='Buy']"));
         IWebElement ClickCart => driver.FindElement(By.XPath("//a[@href='#/cart']"));
