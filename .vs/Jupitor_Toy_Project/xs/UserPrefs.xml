@@ -1,22 +1,27 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{13BEF213-7142-4475-9554-73289E9052B5}|Default">
   <MonoDevelop.Ide.ItemProperties.Jupitor__Toy__Project PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Jupitor_Toy_Project/Utilities/ConstantHelpers.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Jupitor_Toy_Project/Test/ContactPageTest.cs">
     <Files>
       <File FileName="Jupitor_Toy_Project/Pages/ShopPage.cs" Line="19" Column="31" />
-      <File FileName="Jupitor_Toy_Project/Test/ContactPageTest.cs" Line="21" Column="69" />
-      <File FileName="Jupitor_Toy_Project/Utilities/CommonDriver.cs" Line="24" Column="70" />
-      <File FileName="Jupitor_Toy_Project/Utilities/CommonMethods.cs" Line="1" Column="1" />
-      <File FileName="Jupitor_Toy_Project/Utilities/ConstantHelpers.cs" Line="12" Column="45" />
+      <File FileName="Jupitor_Toy_Project/Utilities/CommonDriver.cs" Line="25" Column="115" />
+      <File FileName="Jupitor_Toy_Project/Utilities/CommonMethods.cs" Line="1" Column="2" />
+      <File FileName="Jupitor_Toy_Project/Utilities/ConstantHelpers.cs" Line="19" Column="6" />
+      <File FileName="Jupitor_Toy_Project/Pages/HomePage.cs" Line="29" Column="10" />
+      <File FileName="Jupitor_Toy_Project/Utilities/Driver.cs" Line="43" Column="10" />
+      <File FileName="Jupitor_Toy_Project/Utilities/Wait.cs" Line="65" Column="6" />
+      <File FileName="Jupitor_Toy_Project/Test/ShopPageTest.cs" Line="51" Column="53" />
+      <File FileName="Jupitor_Toy_Project/Test/ContactPageTest.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Jupitor_Toy_Project" expanded="True">
             <Node name="Jupitor_Toy_Project" expanded="True">
-              <Node name="Test" expanded="True" />
-              <Node name="Utilities" expanded="True">
-                <Node name="ConstantHelpers.cs" selected="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Test" expanded="True">
+                <Node name="ContactPageTest.cs" selected="True" />
               </Node>
+              <Node name="Utilities" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,11 +30,7 @@
         <State name="__root__">
           <Node name="Jupitor_Toy_Project" expanded="True">
             <Node name="Jupitor_Toy_Project" expanded="True">
-              <Node name="Jupitor_Toy_Project.Test" expanded="True">
-                <Node name="ContactPageTest" expanded="True">
-                  <Node name="ContactPageErrorValidationTest" selected="True" />
-                </Node>
-              </Node>
+              <Node name="Jupitor_Toy_Project.Test" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

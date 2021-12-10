@@ -16,8 +16,8 @@ namespace Jupitor_Toy_Project.Test
             try
             {
                 test = extent.CreateTest("BuyFunnyCowFluffyBunnyTest").Info("Test Started");
+                test.Log(Status.Pass, "Buy Funny cow and Fluffy Bunny Test is called");
                 //Home page object
-                test.Log(Status.Info, "Buy Funny cow and Fluffy Bunny Test");
                 HomePage homePageObj = new HomePage(driver);
                 homePageObj.NavigateToShopPage();
 
@@ -29,10 +29,14 @@ namespace Jupitor_Toy_Project.Test
                 shopPageObj.FluffyBunny();
                 shopPageObj.ClickOnCart();
                 shopPageObj.validateCart();
+                test.Log(Status.Pass, "FunnyCow and Fluffy Bunny is successfully");
+                test.Pass("Test Passed");
             }
             catch (Exception ex)
             {
-                test.Log(Status.Fail,(ex.ToString()));
+                //test.Log(Status.Fail,(ex.ToString()));
+                test.Log(Status.Fail, ex.StackTrace.ToString());
+                test.Fail("Test Failed");
             }
            
 
@@ -41,23 +45,36 @@ namespace Jupitor_Toy_Project.Test
         [Test]
         public void AdvancedTest()
         {
-            //Home page object
-            HomePage homePageObj = new HomePage(driver);
-            homePageObj.NavigateToShopPage();
+            try
+            {
+                test = extent.CreateTest("Advanced Test").Info("Test Started");
+                test.Log(Status.Pass, "Advanced Test Test is called");
 
-            //Shop Page Objects
-            ShopPage shopPageObj = new ShopPage(driver);
-            shopPageObj.TwoStuffedFrog();
-            shopPageObj.FiveFluffyBunny();
-            shopPageObj.ThreeValentine();
-            shopPageObj.ClickOnCart();
-            shopPageObj.VerifyThePriceForStuffedFrog();
-            shopPageObj.VerifyThePriceForFluffyBunny();
-            shopPageObj.VerifyThePriceForValentineBeer();
-            shopPageObj.FluffyBunnySubTotal();
-            shopPageObj.StuffedFrogSubTotal();
-            shopPageObj.ValentineBearSubTotal();
-            shopPageObj.VerifySumOfAllProduct();
+                //Home page object
+                HomePage homePageObj = new HomePage(driver);
+                homePageObj.NavigateToShopPage();
+
+                //Shop Page Objects
+                ShopPage shopPageObj = new ShopPage(driver);
+                shopPageObj.TwoStuffedFrog();
+                shopPageObj.FiveFluffyBunny();
+                shopPageObj.ThreeValentine();
+                shopPageObj.ClickOnCart();
+                shopPageObj.VerifyThePriceForStuffedFrog();
+                shopPageObj.VerifyThePriceForFluffyBunny();
+                shopPageObj.VerifyThePriceForValentineBeer();
+                shopPageObj.FluffyBunnySubTotal();
+                shopPageObj.StuffedFrogSubTotal();
+                shopPageObj.ValentineBearSubTotal();
+                shopPageObj.VerifySumOfAllProduct();
+            }
+            catch (Exception ex)
+            {
+                //test.Log(Status.Fail,(ex.ToString()));
+                test.Log(Status.Fail, ex.StackTrace.ToString());
+                test.Fail("Test Failed");
+            }
+            
         }
 
     }

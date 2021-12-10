@@ -21,14 +21,13 @@ namespace Jupitor_Toy_Project.Utilities
         [OneTimeSetUp]
         public void Initialize()
         {
-            hTMLReporter = new ExtentHtmlReporter(ConstantHelpers.ReportsPath);
             extent = new ExtentReports();
-            //var htmlReporter = new ExtentHtmlReporter(@"/Users/chriselyn/Projects/Jupitor_Toy_Project/Jupitor_Toy_Project/ExtentReport/ProjectReport.html");
-            extent.AttachReporter(hTMLReporter);
-
+            var htmlReporter = new ExtentHtmlReporter(@"/Users/chriselyn/Projects/Jupitor_Toy_Project/ExtentReport/Report.html");
+            ///Users/chriselyn/Projects/Trademe_project/Trademe_project/Report
+            extent.AttachReporter(htmlReporter);
 
             //hTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            extent = new ExtentReports();
+            //extent = new ExtentReports();
             //extent.AttachReporter(hTMLReporter);
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
